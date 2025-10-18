@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { SendEmail } from "@/api/integrations";
 
 export default function Kontakt() {
   const [formData, setFormData] = useState({
@@ -26,25 +25,18 @@ export default function Kontakt() {
     setIsSubmitting(true);
 
     try {
-      await SendEmail({
-        to: "info@gaestehaus-kraus.de",
-        subject: `Buchungsanfrage von ${formData.name}`,
-        body: `
-Neue Buchungsanfrage
-
-Name: ${formData.name}
-Email: ${formData.email}
-Telefon: ${formData.phone}
-
-Anreise: ${formData.checkin}
-Abreise: ${formData.checkout}
-Anzahl Gäste: ${formData.guests}
-
-Nachricht:
-${formData.message}
-        `,
+      // Log the form data to console for local development
+      console.log("Buchungsanfrage eingereicht:", {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        checkin: formData.checkin,
+        checkout: formData.checkout,
+        guests: formData.guests,
+        message: formData.message,
       });
 
+      // Simulate a successful submission
       setSubmitted(true);
       setFormData({
         name: "",
@@ -58,7 +50,7 @@ ${formData.message}
 
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
-      console.error("Fehler beim Senden:", error);
+      console.error("Fehler beim Verarbeiten:", error);
     }
 
     setIsSubmitting(false);

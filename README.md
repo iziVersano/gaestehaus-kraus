@@ -1,20 +1,25 @@
-# Base44 App
+# Gästehaus Kraus
 
-
-This app was created automatically by Base44.
-It's a Vite+React app that communicates with the Base44 API.
+A local Vite + React frontend application for the Gästehaus Kraus website.
 
 ## Running the app
 
 ```bash
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
+
+The app will be available at `http://localhost:5173/`
 
 ## Building the app
 
 ```bash
-npm run build
+yarn build
 ```
 
-For more information and support, please contact Base44 support at app@base44.com.
+## Features
+
+- Local development environment with no external dependencies
+- Responsive design with Tailwind CSS
+- Contact form with local form handling
+- Multiple pages: Startseite, Zimmer, Über Uns, Galerie, Lage, Kontakt
