@@ -12,14 +12,14 @@ export default function UeberUns() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80)",
+              "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e3ca6c644715df95305a8d/4f6a4e6de_d427ee6d-f86f-462a-9b14-86d70c5e5335.jpg)",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Über Uns</h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-serif">Über Uns</h1>
+          <p className="text-xl md:text-2xl text-white/90 font-serif">
             Unsere Geschichte und unsere Werte
           </p>
         </div>
@@ -46,15 +46,15 @@ export default function UeberUns() {
             <div className="grid md:grid-cols-2 gap-8 my-12">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80"
-                  alt="Haus außen"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e3ca6c644715df95305a8d/5cfc70424_door.jpg"
+                  alt="Eingang Gästehaus"
                   className="rounded-lg shadow-lg w-full h-64 object-cover"
                 />
               </div>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=600&q=80"
-                  alt="Gemütliche Ecke"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e3ca6c644715df95305a8d/a56d3b017_window.jpg"
+                  alt="Fenster mit roten Läden"
                   className="rounded-lg shadow-lg w-full h-64 object-cover"
                 />
               </div>
@@ -135,71 +135,6 @@ export default function UeberUns() {
                     {value.title}
                   </h3>
                   <p className="text-[#6B2C24]">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#4B1E1A] mb-4">
-              Unser Team
-            </h2>
-            <p className="text-xl text-[#6B2C24]">
-              Die Menschen hinter dem Gästehaus Kraus
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Maria Schmidt",
-                role: "Inhaberin",
-                image:
-                  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
-                description:
-                  "Mit Leidenschaft sorgt Maria für das Wohl unserer Gäste.",
-              },
-              {
-                name: "Thomas Schmidt",
-                role: "Inhaber",
-                image:
-                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-                description:
-                  "Thomas kümmert sich um die technische Seite und die Radtouren.",
-              },
-              {
-                name: "Anna Müller",
-                role: "Service",
-                image:
-                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
-                description:
-                  "Anna sorgt für ein herzliches Willkommen und einen perfekten Service.",
-              },
-            ].map((member, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative h-64">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6 text-center bg-[#FAF7F2]">
-                  <h3 className="text-xl font-bold text-[#4B1E1A] mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[#A63A2B] font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-[#6B2C24]">{member.description}</p>
                 </CardContent>
               </Card>
             ))}

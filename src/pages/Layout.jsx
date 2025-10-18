@@ -8,7 +8,7 @@ import { Home, Bed, Users, Image, MapPin, Mail, Phone } from "lucide-react"; // 
 const navigationItems = [
   { title: "Startseite", url: createPageUrl("Startseite"), icon: Home },
   { title: "Zimmer", url: createPageUrl("Zimmer"), icon: Bed },
-  // { title: "Über Uns", url: createPageUrl("UeberUns"), icon: Users },
+  { title: "Über Uns", url: createPageUrl("UeberUns"), icon: Users },
   { title: "Lage", url: createPageUrl("Lage"), icon: MapPin },
   { title: "Kontakt", url: createPageUrl("Kontakt"), icon: Mail },
 ];
@@ -212,8 +212,8 @@ export default function Layout({ children, currentPageName }) {
               <div className="space-y-3 text-sm text-white/80 font-sans">
                 <div className="flex items-center gap-3 justify-center md:justify-start">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  <a href="tel:+491234567890" className="hover:text-[#E8B15C] transition-colors">
-                    +49 (0) 1234 567890
+                  <a href="tel:+4917652832895" className="hover:text-[#E8B15C] transition-colors">
+                    +49 176 52832895
                   </a>
                 </div>
                 <div className="flex items-center gap-3 justify-center md:justify-start">
@@ -224,7 +224,7 @@ export default function Layout({ children, currentPageName }) {
                 </div>
                 <div className="flex items-start gap-3 justify-center md:justify-start">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                  <span>Hauptstraße 12, 89434 Blindheim</span>
+                  <span>Schloßstraße 18, Blindheim</span>
                 </div>
               </div>
             </div>

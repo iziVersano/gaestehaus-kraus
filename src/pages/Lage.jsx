@@ -36,9 +36,9 @@ export default function Lage() {
               Gästehaus Blindheim
             </h2>
             <p className="text-xl text-[#6B2C24]">
-              Hauptstraße 12
+              Schloßstraße 18
               <br />
-              89434 Blindheim
+              Blindheim
               <br />
               Deutschland
             </p>

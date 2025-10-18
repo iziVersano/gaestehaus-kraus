@@ -135,10 +135,10 @@ export default function Kontakt() {
                           Telefon
                         </h3>
                         <a
-                          href="tel:+491234567890"
+                          href="tel:+4917652832895"
                           className="text-[#A63A2B] hover:underline font-sans"
                         >
-                          +49 (0) 1234 567890
+                          +49 176 52832895
                         </a>
                       </div>
                     </div>
@@ -179,9 +179,9 @@ export default function Kontakt() {
                           Adresse
                         </h3>
                         <p className="text-[#6B2C24] font-sans">
-                          Hauptstraße 12
+                          Schloßstraße 18
                           <br />
-                          89434 Blindheim
+                          Blindheim
                         </p>
                       </div>
                     </div>
