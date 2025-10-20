@@ -4,9 +4,13 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [react()],
   server: {
-    allowedHosts: true
+    allowedHosts: true,
+    port: 5173,
+    strictPort: false,
+    open: false
   },
   resolve: {
     alias: {
@@ -21,4 +25,9 @@ export default defineConfig({
       },
     },
   },
-}) 
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    minify: 'esbuild'
+  }
+})
