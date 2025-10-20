@@ -33,10 +33,22 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - name: Verify dist folder
+        run: |
+          echo "Checking dist folder contents..."
+          ls -la dist/
+          echo ""
+          echo "Checking dist/assets folder..."
+          ls -la dist/assets/
+          echo ""
+          echo "Checking dist/index.html..."
+          head -20 dist/index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: gaestehaus-kraus.de
+          force_orphan: true
 
