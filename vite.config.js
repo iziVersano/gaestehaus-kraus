@@ -4,7 +4,8 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
+  publicDir: 'public',
   plugins: [react()],
   server: {
     allowedHosts: true,
@@ -28,6 +29,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'esbuild'
+    minify: 'esbuild',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
